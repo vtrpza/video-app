@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
-import SearchBar from '../Search_bar/search_bar';
-import {VideoDetail} from '../../Components/Video/video_detail';
-import {VideoList} from '../../Components/Video/video_list';
+import SearchBar from '../Search_bar/searchBar';
+import {VideoDetail} from '../../Components/Video/videoDetail';
+import {VideoList} from '../../Components/Video/videoList';
 
 const API_KEY = 'AIzaSyCBTRUw6am2Gsh8C8d43JfxRCflhGdXhbk';
 
@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    YTSearch({key: API_KEY, term: term}, (videos) => {
+    YTSearch({key: API_KEY, term: term, maxResults: 8}, (videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
@@ -26,8 +26,8 @@ class App extends Component {
     const videoSearch = (term) => {this.videoSearch(term)};
     return (
       <div>
-        <SearchBar onSearchTermChange={videoSearch}/>
         <div className='container'>
+          <SearchBar onSearchTermChange={videoSearch}/>
           <div className='row'>
             <VideoDetail video={this.state.selectedVideo}/>
             <VideoList
