@@ -1,7 +1,6 @@
 import React from 'react'
 
-function VideoDetail({video}) {
-    
+export const VideoDetail = ({video}) =>  {
     if (!video) {
         return <div>Welcome, search above for a video you want to see.</div>
     }
@@ -21,5 +20,3 @@ function VideoDetail({video}) {
         </div>
     );
 };
-
-export default VideoDetail
