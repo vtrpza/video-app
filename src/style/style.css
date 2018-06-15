@@ -22,6 +22,19 @@
 	cursor: pointer;
 }
 
+.list-group {
+	padding: 0;
+}
+
 .list-group-item:hover {
 	background-color: #eee;
+}
+
+.embed-resposive-item {
+	width: 740px;
+	height: 450px;
+}
+
+.submit {
+	width: 7% !important;
 }
