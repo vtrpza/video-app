@@ -14,8 +14,8 @@ export const VideoDetail = ({video}) =>  {
                 <iframe title="video" className='embed-resposive-item' src={url}></iframe>
             </div>
             <div className='details'>
-                <div>{video.snippet.title}</div>
-                <div>{video.snippet.description}</div>
+                <div className='title'>{video.snippet.title}</div>
+                <div className='description'>{video.snippet.description}</div>
             </div>
         </div>
     );

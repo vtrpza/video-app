@@ -38,3 +38,11 @@
 .submit {
 	width: 7% !important;
 }
+
+.title {
+	font-size: 18px;
+}
+
+.description {
+	font-size: 14px;
+}
