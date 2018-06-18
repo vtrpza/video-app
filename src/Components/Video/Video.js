@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const VideoDetail = ({video}) =>  {
+export const Video = ({video}) =>  {
     if (!video) {
         return <div>Welcome, search above for a video you want to see.</div>
     }
